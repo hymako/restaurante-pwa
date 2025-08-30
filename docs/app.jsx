@@ -1,5 +1,5 @@
-import React, { useMemo, useState } from "https://esm.sh/react";
-import { createRoot } from "https://esm.sh/react-dom/client";
+const { useMemo, useState } = React;
+const { createRoot } = ReactDOM;
 
 // ======= Datos de ejemplo (frontend) =======
 const CATEGORIES = [
@@ -420,3 +420,4 @@ function App() {
 }
 
 createRoot(document.getElementById("root")).render(<App />);
+
