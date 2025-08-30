@@ -4,12 +4,25 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Demo PWA Restaurante</title>
+
+  <!-- Tailwind (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="manifest" href="data:application/manifest+json,{&quot;name&quot;:&quot;Resto PWA Demo&quot;,&quot;short_name&quot;:&quot;Resto&quot;,&quot;start_url&quot;:&quot;./&quot;,&quot;display&quot;:&quot;standalone&quot;}" />
+
+  <!-- React 18 UMD + ReactDOM (globales) -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+  <!-- Babel Standalone para transpilar JSX en el navegador -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Manifest PWA (opcional) -->
+  <link rel="manifest" href="./manifest.json" />
   <meta name="theme-color" content="#0f172a" />
 </head>
 <body class="bg-slate-50">
   <div id="root"></div>
-  <script type="module" src="./app.jsx"></script>
+
+  <!-- Carga tu app con JSX -->
+  <script type="text/babel" data-type="module" src="./app.jsx"></script>
 </body>
 </html>
